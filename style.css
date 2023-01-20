@@ -41,7 +41,7 @@ header{
 	
 }
 .logo{
-	border-bottom: solid 1px var(--secondColor);
+	border-bottom: solid 1px white;
 	padding: 20px;
 }
 .logo img{
@@ -52,7 +52,7 @@ height: 150px;
 }
 .navbar{
 	padding: 30px;
-	border-bottom: solid 1px var(--secondColor);
+	border-bottom: solid 1px white;
 }
 .icon-nav{
 	color: var(--secondColor);
