@@ -190,8 +190,8 @@ form {
     font-weight: bold;
 }
   .item img{
-	height: 300px;
-    height: 400px;
+	text-align: center;
+    height: 600px;
 	border: 4px solid var(--premyerColor);
 	border-radius: 20px;
     width: 100%;
@@ -242,6 +242,32 @@ form {
 	box-shadow: #D6D6E7 0 3px 7px inset;
 	transform: translateY(2px);
    }
+
+.buynow{
+	display: flex;
+	align-items: flex-start;
+	
+   }
+   .buynow div{
+	text-align: center;
+	margin-top: 20px;
+   }
+   .buynow p{
+	width: 75%;
+   }
+   .buynow button{
+    background-color: var(--secondColor);
+	color: var(--lightColor);
+	padding: 10px;
+	font-size:20px ;
+	border: none;
+	border-radius: 10px;
+	font-family: var(--fontAllon);
+   }
+.buynow a{
+	text-decoration: none;
+	color: #F5F5F5;
+}
  
   /*footer*/ 
   .footer { 
