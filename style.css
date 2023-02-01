@@ -19,7 +19,7 @@
 }
 /*body*/
 body{
-	background-color: var(--lightColor);
+	/*background-color: var(--lightColor);*/
 }
 /* header*/
 .hamburger{
@@ -76,20 +76,20 @@ height: 150px;
 	text-align: center;
 	font-family:'allon';
 	margin-top: 30px;
-	font-size: 20px;
+	font-size: 30px;
 	color: var(--secondColor);
 }
 .container {  display: grid;
-	grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
-	grid-template-rows:   1fr 1fr 1fr 1fr;
 	gap: 10px 10px;
 	grid-auto-flow: row;
-	margin-top: 40px;
+	margin-top: 10px;
+	padding: 40px;
+	text-align: center;
   }
  /*sipder right*/ 
-  .right { grid-area: 1 / 5 / 5 / 6;
+  
 	
-}
+
 form {
 	display: flex;
 	align-items: center;
@@ -142,7 +142,7 @@ form {
 	font-family: var(--fontAllon);
   }
   /*sipder lift */ 
-  .left { grid-area: 1 / 1 / 5 / 2; }
+  
   .social-icons {
 	position: fixed;
 	left: 0;
@@ -169,11 +169,11 @@ form {
   
  
  /*article*/ 
-  .article { grid-area: 1 / 2 / 5 / 5;
+  .article { 
 	margin-right: 60px;
 	text-align: center;
 	display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto;
   grid-template-rows: auto auto;
   grid-gap: 10px;
   padding: 10px;	
@@ -192,8 +192,14 @@ form {
 
   .item img{
 	height: 300px;
-	border: 4px solid var(--premyerColor);
-	border-radius: 20px;
+	border: 3px solid var(--secondColor);
+  }
+
+  .article img{
+	border-radius: 0px;
+background: #ffffff;
+box-shadow:  10px 10px 20px #d4d4d4,
+             -10px -10px 20px #ffffff;
   }
   .button-name {
 	align-items: center;
@@ -240,37 +246,7 @@ form {
 	box-shadow: #D6D6E7 0 3px 7px inset;
 	transform: translateY(2px);
    }
- /*
-  .articl1 { grid-area: 1 / 2 / 2 / 3;}
-  
-  .article2 { grid-area: 1 / 3 / 2 / 4; }
-  
-  .article3 { grid-area: 1 / 4 / 2 / 5; }
-  
-  .Article4 { grid-area: 2 / 2 / 3 / 3; }
-  
-  .Article5 { grid-area: 2 / 3 / 3 / 4; }
-  
-  .article6 { grid-area: 2 / 4 / 3 / 5; }
-  
-  .Article7 { grid-area: 3 / 2 / 4 / 3; }
-  
-  .article8 { grid-area: 3 / 3 / 4 / 4; }
-  
-  .Article9 { grid-area: 3 / 4 / 4 / 5; }
-  
-  .Article10 { grid-area: 4 / 2 / 5 / 3; }
-  
-  .Article11 { grid-area: 4 / 3 / 5 / 4; }
-  
-  .Article12 { grid-area: 4 / 4 / 5 / 5; }
-
-  .Article13{grid-area: 5 / 2 / 6 / 3}
-
-  .Article13{grid-area: 5 / 3 / 6 / 4}
-
-  .Article13{grid-area: 5 / 4 / 6 / 5}
-  */
+ 
   /*footer*/ 
   .footer { 
 	background-color: var(--premyerColor);
@@ -305,11 +281,89 @@ form {
 
  .footer{
 	padding: 10px;
+	margin-top: 20px;
+}
+.index-description p{
+	font-size: 19px;
+	font-family: var(--fontAllon);
+	color: var(--premyerColor);
+}
+.article-sibder{
+	
+	background-color: var(--secondColor);
+	margin-top: 40px;
+	margin-bottom: 100px;
+	
+	font-size: 20px;
+	color: white;
+	}
+	.article-sibder img{
+		border: 6px solid var(--premyerColor);
+		border-radius: 10px;
+	}
+.box {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	padding: 40px;
+	
+}
+
+.box div{
+	margin-left: 70px;
+}
+
+.article-sibdar1{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 20px;
+}
+.article-sibdar1 img{
+	height: 400px;
+}
+
+.article-sibder2{
+	height: 460px;
+	background-color: var(--secondColor);
+	margin-top: 40px;
+	
+}
+
+.article-sibder2 img{
+	border: 6px solid var(--premyerColor);
+	border-radius: 10px;
 }
 
 /* media query */
 /* phone*/
  @media only screen and (max-width: 767px) {
+	.article-sibdar1{
+		display: block;
+	}
+	
+	.index-description p{
+		font-size: 15px;
+		font-family: var(--fontAllon);
+	}
+	.article{
+		grid-template-columns: auto auto;
+
+	}
+	
+	.box{ 
+		display: block;
+	}
+	.box div{
+		margin-left: 0px;
+	}
+	.box img{
+		height: 300px;
+	}
+
+	.slader{
+		display: none;
+	}
 	
 	.hamburger{
 		display: block;
@@ -359,11 +413,20 @@ form {
 	  .left{
 		display:none}
 	.article{
-			display: grid;
-			margin: auto;
+			display:block;
+			
 		  }
-	.item img{
-			height: 150px;
+		  .item img{
+			height: 400px;
+		}
+
+		.article-sibder{
+			display: block;
+			margin: auto;
+		}
+
+		.article-sibder2{
+			height: auto;
 		}
 
 		.container{
@@ -383,6 +446,11 @@ form {
   }
   
   @media only screen and (min-width: 768px) and (max-width:1023px){
+	.article{
+		grid-template-columns: auto auto auto;
+
+	}
+
 	.hamburger{
 		display: block;
 	  }
@@ -469,6 +537,10 @@ form {
   }
 
   @media only screen and (min-width: 1024px) and (max-width:1510px){
+	.article{
+		grid-template-columns: auto auto auto;
+
+	}
 	  .right{
 		display:none;
 	  }
